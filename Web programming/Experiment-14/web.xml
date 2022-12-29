@@ -1,0 +1,16 @@
+<web-app xmlns:calc="urn:geronimo-samples-jws" xmlns="http://java.sun.com/xml/ns/javaee" version="2.5"> 
+<servlet> 
+<display-name>CalculatorService</display-name> 
+<servlet-name>CalculatorService</servlet-name> 
+<servlet-class> org.apache.geronimo.samples.jws.CalculatorService </servlet-class> 
+</servlet> 
+<servlet-mapping> 
+<servlet-name>CalculatorService</servlet-name> 
+<url-pattern>/calculator</url-pattern> 
+</servlet-mapping> 
+<service-ref> 
+<service-ref-name>services/Calculator</service-ref-name> 
+<service-interface>javax.xml.ws.Service</service-interface> 
+<wsdl-file>WEB-INF/CalculatorService.wsdl</wsdl-file> 
+</service-ref> 
+</web-app>
