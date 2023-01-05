@@ -1,132 +1,36 @@
 #include<stdio.h>
-
-struct frame{
-
-int num;
-
-char str[20];
-
-};
-
-struct frame arr[10];
-
-int n;
-
-void sort() /*Bubble sort */
-
+#include<stdlib.h>
+#define bucketSize 512
+void bktInput(int a,int b)
 {
-
-int i,j;
-
-struct frame temp;
-
-for(i=0;i<n-1;i++)
-
-for(j=0;j<n-i-1;j++)
-
-if(arr[j].num>arr[j+1].num)
-
-{ temp=arr[j];
-
-arr[j]=arr[j+1];
-
-arr[j+1]=temp;
-
+if(a>bucketSize)
+printf("\n\t\tBucket overflow");
+else {
+delay(500);
+while(a>b){
+printf("\n\t\t bytes outputed.");
+a-=b;
+delay(500);
 }
-
+if (a>0) printf("\n\t\tLast %d%d" ,&a,&b);
+printf(“bytes sent\t");
+printf("\n\t\tBucket output successful");
 }
-
-int main()
-
-{
-
-int i;
-
-printf("Enter the number of frames\n");
-
-scanf("%d",&n);
-
-printf("Enter the frame sequence number and frame contents\n");
-
-for(i=0;i<n;i++)
-
-scanf("%d%c",&arr[i].num,arr[i].str);
-
-sort();
-
-printf("The frame in sequences\n");
-
-for(i=0;i<n;i++)
-
-printf("%d\t%s\n",arr[i].num,arr[i].str);
-
 }
-#include<stdio.h>
-
-struct frame{
-
-int num;
-
-char str[20];
-
-};
-
-struct frame arr[10];
-
-int n;
-
-void sort() /*Bubble sort */
-
-{
-
-int i,j;
-
-struct frame temp;
-
-for(i=0;i<n-1;i++)
-
-for(j=0;j<n-i-1;j++)
-
-if(arr[j].num>arr[j+1].num)
-
-{ temp=arr[j];
-
-arr[j]=arr[j+1];
-
-arr[j+1]=temp;
-
+void main() {
+int op, pktSize;
+  randomize();
+printf("Enter output rate : ");
+scanf(“%d”,&op);
+for(int i=1;i<=5;i++){
+delay(random(1000));
+pktSize=random(1000);
+printf("\nPacket no %d",i);
+printf("\tPacket size = %d",pktSize);
+bktInput(pktSize,op);
 }
-
 }
-
-int main()
-
-{
-
-int i;
-
-printf("Enter the number of frames\n");
-
-scanf("%d",&n);
-
-printf("Enter the frame sequence number and frame contents\n");
-
-for(i=0;i<n;i++)
-
-scanf("%d%c",&arr[i].num,arr[i].str);
-
-sort();
-
-printf("The frame in sequences\n");
-
-for(i=0;i<n;i++)
-
-printf("%d\t%s\n",arr[i].num,arr[i].str);
-
-}
-
-OUTPUT:
-Enter output rate : 100
+       Enter output rate : 100
 Packet no 0 Packet size = 3
 Bucket output successful
 Last 3 bytes sent
