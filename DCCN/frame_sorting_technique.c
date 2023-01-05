@@ -50,7 +50,7 @@ printf("Enter the frame sequence number and frame contents\n");
 
 for(i=0;i<n;i++)
 
-scanf("%d%d",&arr[i].num,&arr[i].str);
+scanf("%d%c",&arr[i].num,arr[i].str);
 
 sort();
 
