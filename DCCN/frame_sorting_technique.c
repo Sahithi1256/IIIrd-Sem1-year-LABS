@@ -61,3 +61,21 @@ for(i=0;i<n;i++)
 printf("%d\t%s\n",arr[i].num,arr[i].str);
 
 }
+
+OUTPUT:
+Enter output rate : 100
+Packet no 0 Packet size = 3
+Bucket output successful
+Last 3 bytes sent
+Packet no 1 Packet size = 33
+Bucket output successful
+Last 33 bytes sent
+Packet no 2 Packet size = 117
+Bucket output successful
+100 bytes outputted.
+Last 17 bytes sent
+Packet no 3 Packet size = 95
+Bucket output successful
+Last 95 bytes sent
+Packet no 4 Packet size = 949
+Bucket overflow
